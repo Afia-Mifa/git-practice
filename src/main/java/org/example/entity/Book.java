@@ -34,4 +34,16 @@ public class Book {
                 .collect(Collectors.joining()) +
                 '}';
     }
+
+    public String getAuthorNames() {
+        return authors.stream()
+                .map(a -> a.getFirstName() + " " + a.getLastName())
+                .collect(Collectors.joining());
+    }
+
+    public String getPrice() {
+        return String.format("%.2f", Objects.nonNull(price) ?
+                (price.getPrice().doubleValue() + price.getVat().doubleValue()) - price.getDiscount()
+                : null);
+    }
 }
