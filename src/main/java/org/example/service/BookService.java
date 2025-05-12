@@ -10,6 +10,7 @@ public class BookService {
         book.setName(dto.getName());
         book.setIsbn(dto.getIsbn());
         book.setAuthors(dto.getAuthors());
+        book.setPrice(dto.getPrice());
         System.out.print("Created book successfully....\n" + book);
     }
 }

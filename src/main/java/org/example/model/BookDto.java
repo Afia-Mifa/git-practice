@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.example.entity.Author;
+import org.example.entity.Price;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
@@ -17,6 +19,8 @@ public class BookDto {
     private String name;
 
     private String isbn;
+
+    private Price price;
 
     private List<Author> authors;
 }

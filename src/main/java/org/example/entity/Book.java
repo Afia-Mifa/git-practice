@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Getter
@@ -20,11 +21,14 @@ public class Book {
 
     private List<Author> authors;
 
+    private Price price;
+
     @Override
     public String toString() {
         return "Book{" +
                 "name='" + name + '\'' +
                 ", isbn='" + isbn + '\'' +
+                ", price='" + String.format("%.2f", Objects.nonNull(price) ? price.getPrice().doubleValue() : null) + '\'' +
                 ", authors=" + authors.stream()
                 .map(a -> a.getFirstName() + " " + a.getLastName())
                 .collect(Collectors.joining()) +
