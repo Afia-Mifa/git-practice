@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         BookDto dto = new BookDto();
         dto.setName("Harry Potter");
+        dto.setIsbn("9781408855652");
         Author author = new Author();
         author.setFirstName("Jacklyn");
         author.setLastName("Hill");

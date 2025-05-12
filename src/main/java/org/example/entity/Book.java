@@ -16,12 +16,15 @@ public class Book {
 
     private String name;
 
+    private String isbn;
+
     private List<Author> authors;
 
     @Override
     public String toString() {
         return "Book{" +
                 "name='" + name + '\'' +
+                ", isbn='" + isbn + '\'' +
                 ", authors=" + authors.stream()
                 .map(a -> a.getFirstName() + " " + a.getLastName())
                 .collect(Collectors.joining()) +
