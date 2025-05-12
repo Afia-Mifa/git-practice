@@ -1,10 +1,21 @@
 package org.example;
 
+import org.example.entity.Author;
+import org.example.model.BookDto;
+import org.example.service.BookService;
+
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
+        BookDto dto = new BookDto();
+        dto.setName("Harry Potter");
+        Author author = new Author();
+        author.setFirstName("Jacklyn");
+        author.setLastName("Hill");
+        dto.setAuthors(List.of(author));
 
-        int i = 5;
-        int sum = i + 6;
-        System.out.println("Sum is " + sum);
+        BookService bookService = new BookService();
+        bookService.create(dto);
     }
 }
