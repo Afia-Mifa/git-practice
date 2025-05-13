@@ -11,7 +11,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         BookDto dto = new BookDto();
-        dto.setName("Harry Potter-1");
+        dto.setName("Witch");
         dto.setIsbn("9781408855652");
 
         Author author = new Author();
