@@ -16,4 +16,14 @@ public class Author {
     private String lastName;
 
     private int age;
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }
+
